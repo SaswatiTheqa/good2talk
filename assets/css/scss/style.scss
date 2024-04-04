@@ -1,0 +1,17 @@
+@import 'base/variables';
+@import 'base/mixin';
+@import 'base/extend';
+@import 'base/fonts';
+
+@import 'components/reset'; 
+@import 'components/button';
+@import 'components/form';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/common';
+
+@import 'home'; 
+
+
+// sass --watch assets/css/scss/style.scss assets/css/style.css

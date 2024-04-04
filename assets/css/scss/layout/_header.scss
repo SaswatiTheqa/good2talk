@@ -1,0 +1,21 @@
+.main-header{ padding-top: 30px;
+    @include breakpoint('lg', max) {
+        padding-top: 17px;
+    }
+    .quick-links .site-language a{color: $black_color; @include font-size($font-size-body);
+        &:hover{ color: $primary_color;  }
+    }
+    .logo{ 
+        a {
+            img{ width: 119px;  @include transition-prefixes(0.3s);
+                @include breakpoint('lg', max) {
+                    width:75px
+                }
+                @include breakpoint('sm', max) {
+                    width:66px
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.input-select{
+	&.input-group {
+		border-radius: 26px;
+		@include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.24));
+		.go-btn {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			color: $black_color;
+			font-weight: $fontBold;
+			background: $white_color;
+			padding: 5px 15px;
+			border-top-right-radius: 26px;
+			border-bottom-right-radius: 26px;
+			border: 2px solid $white_color;
+			margin-left: 2px !important;
+			@include transition-prefixes(0.3s);
+			&:hover{ @include transition-prefixes(0.3s); background-color:  $secondaryHover_color; border-color: $secondary_color;}
+		}
+		.form-select{ 
+			padding: 5px 25px;
+			border-top-left-radius: 26px;
+			border-bottom-left-radius: 26px;
+			border-color: transparent;
+			font-size: 1.6rem;
+			color: $black_color;
+			font-weight: $fontBold;
+			&:focus{box-shadow: none;}
+			@include breakpoint('lg', min) {
+				padding: 15px 25px;
+			}
+
+		}
+	}
+	}

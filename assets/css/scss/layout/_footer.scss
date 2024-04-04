@@ -1,0 +1,57 @@
+.footer.footer-main { background: url(../images/homepage-footer-bg-d.png) no-repeat center 0; padding: 160px 0 90px 0; background-size: cover;
+    @include breakpoint('md', max) {  padding: 60px 0 100px 0;}
+    @include breakpoint('lg', max) {
+        background-image: url(../images/homepage-footer-bg-m.png); background-size: cover;
+
+    }
+    .footer-row{
+            & > *  { position: relative;
+                &:before {content: '';  background: rgba(64, 61, 68, 0.2); position: absolute; bottom: 0 ;
+                    @include breakpoint('md', min) { top: 0; width: 2px; left: -15px;}
+                    @include breakpoint('md', max) { height: 2px; left: 20px; right: 20px;}
+                }
+                &:first-child{ 
+                    &:before{display: none;}
+                }
+                @include breakpoint('md', max) {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+            
+        }
+        
+     }
+     .footer-logo{
+        @include breakpoint('md', max) {  width: 86px;}
+     }
+    .footer-nav{
+        ul { 
+            li { margin-left: 20px;
+                a{ position: relative;  
+                    &.ext-icon {  padding-right: 20px;
+                       span{transform: rotate(-45deg); position: absolute; right: 0;} 
+                    }
+                }
+                &  + li{
+                    a{
+                        &:before{
+                            content: '|';  position: absolute; left: -11px; color: $body_color;
+                       }
+                       
+                    }
+                }
+            } 
+        }
+    }
+    .copyright{ margin-top: 100px; font-size: 12px;
+        @include breakpoint('md', max) {width: 100%; margin-top: 60px;}
+    }
+    .input-select{width: calc(100% - 30px);
+        @include breakpoint('md', max) {width: 100%}
+    }
+    .footer-img img { width: 73px;}
+
+    .scrollTop { position: absolute; right: 20px; bottom: -20px;
+         a  { font-size: 5rem;}
+    }
+}

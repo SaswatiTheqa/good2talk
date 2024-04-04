@@ -1,0 +1,25 @@
+
+.btn{  border: 2px solid; color: $black_color; @include transition-prefixes(0.3s);  
+    &:focus{ box-shadow: none; }
+    &.site-btn{ border-radius: 30px; position: relative; @include font-size($font-size-body); font-weight: $fontBold;  
+          @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.2)); padding: 11px 20px;
+          @include breakpoint('lg', max) {padding: 5px 20px; font-size: 1.4rem;  line-height: 1; min-height: 38px; }
+        &.btn-rightarrow{ padding-right: 55px;
+            .right-icon{ position: absolute; right: 20px;
+                @include breakpoint('lg', max) {
+                    right: 15px;
+                }
+            }
+            @include breakpoint('lg', max) {
+                padding-right: 30px;
+            }
+        }
+    }
+    &.site-btn-pri-bg{ background-color: $primary_color; color: $black_color; border-color: $primary_color;
+        &:hover{ background-color: $primaryHover_color;}
+    }
+    &.site-btn-sec-bg{ background-color: $secondary_color; border-color: $secondary_color;
+        &:hover{ background-color: $secondaryHover_color;}
+    }
+    
+}

@@ -1,0 +1,102 @@
+.section-banner{ background: $site-bg-light url("../images/homepage-header-bg-d.png") no-repeat center bottom; background-size: cover;
+    padding: 97px 0 150px 0;
+    @include breakpoint('lg', max) {
+        background-image: url(../images/homepage-header-bg-m.png);
+        background-size: cover; 
+        
+    }
+    .caption{
+        .heading-2{margin-bottom: 30px;  }
+    } 
+}
+
+// ==========================support_block list
+.list-icon-btn-wrap{
+    li{ margin-bottom: 10px;
+        .list-btn{ position: relative;  padding-left: 52px;  display: flex; align-items: center;  justify-content: center;
+            @include breakpoint('lg', min) {
+                min-height: 52px;
+            }
+            @include breakpoint('lg', max) {
+                padding-left: 20px;
+            }
+            .list-icon{ position: absolute; @include round(42px); left: 5px; 
+                img{ width: 100%; height: 100%;}  
+                @include breakpoint('lg', max) { display: none; }
+            }
+            .right-icon{transform: rotate(-45deg); }
+        }
+        &:last-child{margin-bottom: 0px;}
+   }
+}    
+
+.support_block{ 
+    @include breakpoint('md', min) { max-width: 430px;}
+    .button-holder{  margin-top: 30px;
+        @include breakpoint('lg', max) {
+            .site-btn{display: flex; align-items: center;  justify-content: center;}
+        }
+    }
+}
+
+.section-support{ margin-top: 40px; }
+.support-box-wrap{ height: 100%;
+    background-image: linear-gradient(#f4f2ec 90px, #fff 0);
+    padding: 20px 30px;
+    border-radius: 14px;
+    @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.29));
+    text-align: center;
+    &-header{ 
+        .heading-3{margin-bottom: 20px; }
+    }
+    @include breakpoint('lg', max) {
+        padding: 12px 10px;
+    }  
+}
+
+.section-support-post-secondary{padding-bottom: 90px;}
+// =================== slider-sec
+.section-post-secondary{ overflow: hidden;
+    .carve-bg{ position: absolute; top:0; right: 0; left: 0;
+        img{ object-fit: cover; height: 100%; width: 100%;}
+    }
+    .slider-sec{ padding: 90px 0; z-index: 1; position: relative; 
+        .slider-students-feeling{padding-top: 25px; margin-bottom: 60px;}
+        .cards{ padding: 20px;  background: #fff; border-radius: 10px; 
+            &.quote-cards{ box-shadow: 0 0 24px rgba(0,0,0,0.16);  height: 100%; padding-bottom: 57px;
+                .quote-card-body{margin-top: 20px;  margin-bottom: 40px;}
+                .quote-card-footer { margin-bottom: 20px; font-size: 1.4rem;}
+            }
+        }
+        .swiper-slide{ height: auto;
+            &:nth-of-type(1) , &:nth-of-type(4) , &:nth-of-type(7) {
+                .quote-cards{ background: url(../images/quote-bg-1.svg) no-repeat left bottom;
+                    .quote-icon::before { content: url("../images/on-quote-icon.svg");} 
+                }
+            }
+            &:nth-of-type(2) , &:nth-of-type(5) , &:nth-of-type(8) {
+                .quote-icon::before { content: url("../images/ns-quote-icon.svg");}
+                .quote-cards{ background: url(../images/quote-bg-2.svg) no-repeat right bottom;}
+            }
+            &:nth-of-type(3) , &:nth-of-type(6) {
+                .quote-icon::before { content: url("../images/ns-quote-icon.svg");}
+                .quote-cards{ background: url(../images/quote-bg-3.svg) no-repeat left bottom;}
+            }
+        }
+
+    }
+    .next-prev-sider{ position: relative; width: 130px; display: flex; justify-content: space-between;height: 54px; margin-top: 35px;
+        & > *{  @include round(52px); position: relative; right: inherit; left:inherit; 
+            @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.16));
+            
+                border: 2px solid $white_color; @include transition-prefixes(0.3s); background: $white_color;  font-size: 16px; color: #000; border: 2px solid #fff;
+                &:hover{ background-color:  $secondaryHover_color; border-color: $secondary_color;}
+                &:after{ display: none; }
+                svg{ width: 20px; }
+                &.swiper-button-disabled{ opacity: 1;
+                    & > *{  opacity: .35;}
+                 }
+        }
+    }
+}
+

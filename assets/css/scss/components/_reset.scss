@@ -1,0 +1,18 @@
+/* ========================== */
+/* START OF RESET CSS */
+/* ========================== */
+
+*{outline:none !important;}
+// a, a:hover, a:visited{color: $PrimaryThemeColor ;}
+body{ font-family: $siteFont; font-size: torem(16); }
+figure{ margin-bottom: 0;}
+img{width:auto; max-width:100%; height:auto;border:0;}
+a{ color: $body_color; }
+a:hover{ color: $primary_color;}
+
+:-webkit-scrollbar{
+	width:0;
+}
+
+
+
