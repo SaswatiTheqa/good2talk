@@ -13,8 +13,8 @@ $(document).ready(function () {
           clickable: true,
         },
         breakpoints: {
-                  0: { slidesPerView: 1, spaceBetween: 20, },
-                  440: { slidesPerView: 2, spaceBetween: 20, },
+                  0: { slidesPerView: 1.2, spaceBetween: 20, },
+                  440: { slidesPerView: 1.6, spaceBetween: 20, },
                   575: { slidesPerView: 2.1, spaceBetween: 20, },
                   767: { slidesPerView: 2.8, spaceBetween: 30, },
                   1024: { slidesPerView: 3.2, spaceBetween: 30, },
@@ -27,7 +27,7 @@ $(document).ready(function () {
     $("#scrollTop").click(function () {
         $('html, body').animate({
             scrollTop: $("header").offset().top
-        }, 1500);
+        }, 500);
     });
 
 
