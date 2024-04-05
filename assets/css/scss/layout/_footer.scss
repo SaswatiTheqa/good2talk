@@ -1,8 +1,8 @@
-.footer.footer-main { background: url(../images/homepage-footer-bg-d.png) no-repeat center 0; padding: 160px 0 90px 0; background-size: cover;
-    @include breakpoint('md', max) {  padding: 60px 0 100px 0;}
-    @include breakpoint('lg', max) {
+.footer.footer-main { background: url(../images/homepage-footer-bg-d.png) no-repeat center 0; padding: 160px 0 90px 0; 
+    @include breakpoint('sm', max) {  padding: 60px 0 100px 0;}
+    @include breakpoint('xl', max) {
         background-image: url(../images/homepage-footer-bg-m.png); background-size: cover;
-
+  
     }
     .footer-row{
             & > *  { position: relative;
@@ -17,7 +17,6 @@
                     padding-top: 30px;
                     padding-bottom: 30px;
                 }
-            
         }
         
      }
@@ -53,5 +52,19 @@
 
     .scrollTop { position: absolute; right: 20px; bottom: -20px;
          a  { font-size: 5rem;}
+    }
+}
+// exit btn
+.exit { display: none; position: fixed; right: 20px; bottom: 90px; z-index: 99; 
+    @include breakpoint('lg', min) {
+        bottom: 30px;
+        display: inline-flex;
+    }
+    a{@include round(52px); border: 2px solid transparent; background-color: $white_color; font-size: 12px;
+        @include transition-prefixes(0.3s); @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.24));  display: inline-flex;
+        flex-direction: column;text-align: center;
+        justify-content: center;
+      &:hover{ border-color: $secondary_color; background: $secondaryHover_color;}
+      img{width: 20px;}
     }
 }

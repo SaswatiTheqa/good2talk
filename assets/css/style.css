@@ -3,10 +3,6 @@
 /* ========================== */
 /* START OF RESET CSS */
 /* ========================== */
-* {
-  outline: none !important;
-}
-
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
@@ -54,6 +50,7 @@ a:hover {
   font-weight: 700;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
   padding: 11px 20px;
+  min-height: 52px;
 }
 @media screen and (min-width: 992px) {
   .btn.site-btn {
@@ -65,7 +62,6 @@ a:hover {
   .btn.site-btn {
     padding: 5px 20px;
     font-size: 1.4rem;
-    line-height: 1;
     min-height: 38px;
   }
 }
@@ -136,8 +132,15 @@ a:hover {
   border-bottom-left-radius: 26px;
   border-color: transparent;
   font-size: 1.6rem;
+  line-height: 1.63;
   color: #000;
   font-weight: 700;
+}
+@media screen and (min-width: 992px) {
+  .input-select.input-group .form-select {
+    font-size: 1.6rem;
+    line-height: 1.63;
+  }
 }
 .input-select.input-group .form-select:focus {
   box-shadow: none;
@@ -191,14 +194,13 @@ a:hover {
 .footer.footer-main {
   background: url(../images/homepage-footer-bg-d.png) no-repeat center 0;
   padding: 160px 0 90px 0;
-  background-size: cover;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .footer.footer-main {
     padding: 60px 0 100px 0;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .footer.footer-main {
     background-image: url(../images/homepage-footer-bg-m.png);
     background-size: cover;
@@ -291,6 +293,44 @@ a:hover {
   font-size: 5rem;
 }
 
+.exit {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 99;
+}
+@media (min-width: 992px) {
+  .exit {
+    bottom: 30px;
+    display: inline-flex;
+  }
+}
+.exit a {
+  width: 52px;
+  height: 52px;
+  border-radius: 26px;
+  border: 2px solid transparent;
+  background-color: #fff;
+  font-size: 12px;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.24);
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.exit a:hover {
+  border-color: #f79548;
+  background: #fadcc5;
+}
+.exit a img {
+  width: 20px;
+}
+
 html {
   font-size: 10px;
 }
@@ -359,7 +399,7 @@ p {
 
 .section-banner {
   background: #F4F2EC url("../images/homepage-header-bg-d.png") no-repeat center bottom;
-  background-size: cover;
+  background-size: auto;
   padding: 97px 0 150px 0;
 }
 @media (max-width: 991px) {
@@ -390,6 +430,13 @@ p {
 @media (max-width: 991px) {
   .list-icon-btn-wrap li .list-btn {
     padding-left: 20px;
+  }
+}
+@media (max-width: 1199px) {
+  .list-icon-btn-wrap li .list-btn {
+    line-height: 1;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 .list-icon-btn-wrap li .list-btn .list-icon {
@@ -440,8 +487,8 @@ p {
   background-image: linear-gradient(#f4f2ec 90px, #fff 0);
   padding: 20px 30px;
   border-radius: 14px;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.29);
   text-align: center;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.29);
 }
 .support-box-wrap-header .heading-3 {
   margin-bottom: 20px;

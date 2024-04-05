@@ -21,7 +21,7 @@
 			border-top-left-radius: 26px;
 			border-bottom-left-radius: 26px;
 			border-color: transparent;
-			font-size: 1.6rem;
+			@include font-size($font-size-body);
 			color: $black_color;
 			font-weight: $fontBold;
 			&:focus{box-shadow: none;}

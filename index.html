@@ -6,7 +6,6 @@
     <title>Good2talk</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -16,7 +15,7 @@
 			<div class="row align-items-start">
 				<div class="col-6 col-lg-6">
 					<div class="logo">
-						<a href="#"><img src="https://good2talk.ca/wp-content/uploads/2021/12/good2talk-logo.svg" alt="Good2TalkLogo"></a>
+						<a href="#"><img src="https://good2talk.ca/wp-content/uploads/2021/12/good2talk-logo.svg" alt="Good2TalkLogo" aria-labelledby="Good2TalkLogo"></a>
 					</div>
 				</div>
 				<div class="col-6 col-lg-6">
@@ -37,12 +36,12 @@
                         <h1 class="heading-2">Good2Talk provides free, confidential support services for post-secondary students in Ontario and Nova Scotia</h1>
                         <div class="col-md-11 col-lg-8">
                             <div class="input-group input-select">
-                                <select class="form-select">
-                                <option value="" selected="">Choose province</option>
-                                <option value="">Ontario</option>
-                                <option value="">Nova Scotia</option>
+                                <select class="form-select" id="provinceSelect" aria-label="Choose province">
+                                    <option value="" selected="">Choose province</option>
+                                    <option value="Ontario">Ontario</option>
+                                    <option value="NovaScotia">Nova Scotia</option>
                                 </select>
-                                <button class="go-btn" type="button">Go</button>
+                                <button class="go-btn" id="provinceGo" type="button" >Go</button>
                             </div>
                        </div>
                     </div>
@@ -67,7 +66,7 @@
                                                     <span class="list-icon">
                                                         <img src="assets/images/icon/on-call-circle-icon.svg" alt="" >
                                                     </span>
-                                                    <span class="btn-text">Call 1-866-925-5454</span>
+                                                    <span class="btn-text" >Call 1-866-925-5454</span>
                                                 </a>
                                             </li>
                                             <li>
@@ -92,7 +91,7 @@
                                             <li>
                                                 <a href=""  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
                                                     <span class="list-icon">
-                                                        <img src="assets/images/icon/web-message.svg" alt="" >
+                                                        <img src="assets/images/icon/on-p2p-circle-icon.svg" alt="" >
                                                     </span>
                                                     <span class="btn-text">Peer-to-Peer Community</span>
                                                     <span class="right-icon">
@@ -140,6 +139,7 @@
    </section>
 
    
+   <!-----section-support-post-secondary------>
     <section class="section section-support-post-secondary site-bg-light cmn-cn-p-m">
         <div class="container">
             <div class="row">
@@ -177,7 +177,7 @@
         </div>
     </section>
 
-
+    <!-----section-post-secondary------>
     <section class="section section-post-secondary position-relative cmn-cn-p-m">
         <div class="carve-bg">
             <img src="assets/images/white-arch-gray-bg.png" alt="">
@@ -276,6 +276,7 @@
         </div>
     </section>
 
+    <!-----footer------>
     <footer class="footer footer-main position-relative cmn-cn-p-m">
         <div class="container position-relative">
           <div class="row gx-5 footer-row">
@@ -292,7 +293,6 @@
             </div>
             <div class="col-md-4">
               Services in Ontario and Nova Scotia
-            
               <div class="input-group mt-5 input-select">
                 <select class="form-select" aria-label="Choose province">
                   <option value="" selected="">Choose province</option>
@@ -320,7 +320,9 @@
     </footer>
     
     
-   
+    <div id="exit" class="exit" >
+        <a href="https://www.google.com/" target="" class="btn" role="button" aria-label="Leave this site"><img class="mx-auto" src="assets/images/icon/new-tab-black-icon.svg" alt="New tab black icon" role="presentation">Exit</a>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>

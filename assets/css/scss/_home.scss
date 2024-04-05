@@ -1,9 +1,8 @@
-.section-banner{ background: $site-bg-light url("../images/homepage-header-bg-d.png") no-repeat center bottom; background-size: cover;
+.section-banner{ background: $site-bg-light url("../images/homepage-header-bg-d.png") no-repeat center bottom; background-size: auto;
     padding: 97px 0 150px 0;
     @include breakpoint('lg', max) {
         background-image: url(../images/homepage-header-bg-m.png);
         background-size: cover; 
-        
     }
     .caption{
         .heading-2{margin-bottom: 30px;  }
@@ -13,13 +12,19 @@
 // ==========================support_block list
 .list-icon-btn-wrap{
     li{ margin-bottom: 10px;
-        .list-btn{ position: relative;  padding-left: 52px;  display: flex; align-items: center;  justify-content: center;
+        .list-btn{ position: relative;  padding-left: 52px; @include flex-center(); 
             @include breakpoint('lg', min) {
-                min-height: 52px;
+                min-height: 52px; 
             }
             @include breakpoint('lg', max) {
                 padding-left: 20px;
+              
             }
+            @include breakpoint('xl', max) {
+                line-height: 1; padding-top: 8px; padding-bottom: 8px;
+              
+            }
+            
             .list-icon{ position: absolute; @include round(42px); left: 5px; 
                 img{ width: 100%; height: 100%;}  
                 @include breakpoint('lg', max) { display: none; }
@@ -34,24 +39,19 @@
     @include breakpoint('md', min) { max-width: 430px;}
     .button-holder{  margin-top: 30px;
         @include breakpoint('lg', max) {
-            .site-btn{display: flex; align-items: center;  justify-content: center;}
+            .site-btn{ @include flex-center() }
         }
     }
 }
 
 .section-support{ margin-top: 40px; }
 .support-box-wrap{ height: 100%;
-    background-image: linear-gradient(#f4f2ec 90px, #fff 0);
-    padding: 20px 30px;
-    border-radius: 14px;
-    @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.29));
-    text-align: center;
+    background-image: linear-gradient(#f4f2ec 90px, #fff 0); padding: 20px 30px; border-radius: 14px; text-align: center;
+    @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.29)); 
     &-header{ 
         .heading-3{margin-bottom: 20px; }
     }
-    @include breakpoint('lg', max) {
-        padding: 12px 10px;
-    }  
+    @include breakpoint('lg', max) { padding: 12px 10px;}  
 }
 
 .section-support-post-secondary{padding-bottom: 90px;}
@@ -85,11 +85,11 @@
         }
 
     }
-    .next-prev-sider{ position: relative; width: 130px; display: flex; justify-content: space-between;height: 54px; margin-top: 35px;
+    // prev-sider btn
+    .next-prev-sider{ position: relative; width: 130px; display: flex; justify-content: space-between; height: 54px; margin-top: 35px;
         & > *{  @include round(52px); position: relative; right: inherit; left:inherit; 
             @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.16));
-            
-                border: 2px solid $white_color; @include transition-prefixes(0.3s); background: $white_color;  font-size: 16px; color: #000; border: 2px solid #fff;
+                border: 2px solid $white_color; @include transition-prefixes(0.3s); background: $white_color;  font-size: 16px; color: $black_color; border: 2px solid $white_color;
                 &:hover{ background-color:  $secondaryHover_color; border-color: $secondary_color;}
                 &:after{ display: none; }
                 svg{ width: 20px; }
