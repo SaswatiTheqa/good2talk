@@ -1,11 +1,19 @@
 .section-banner{ background-repeat: no-repeat; background-position: center bottom ;  background-size: auto; background-color: $site-bg-light;
-    padding: 97px 0 150px 0; 
+    padding: 160px 0 150px 0; margin-top: -150px;
+    @include breakpoint('lg', min) {
+        margin-top: -137px;
+    }
+
     @include breakpoint('lg', max) {
         background-size: cover; 
     }
     &.section-banner-main{  background-image: url(../images/homepage-header-bg-d.png); 
         @include breakpoint('lg', max) {
             background-image: url(../images/homepage-header-bg-m.png);
+        }
+        @include breakpoint('lg', min) {
+            margin-top: -197px;
+          
         }
     }
     &.section-banner-on{ background-image: url(../images/on-header-bg-d.png);
@@ -116,77 +124,4 @@
 
 
 
-.support-cards{ background-color: $white_color; border-radius: 9px; padding: 20px 12px; height: 100%;  @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.24));
 
-}
-
-
-// on-section-support-service
-.on-section-support-service{}
-
-
-// on-section-connexOntario
-
-.on-section-connexOntario{}
-
-// ======== on-section-resources
-
-.on-section-resources{}
-.cards.resources-cards{ background-color: transparent; box-shadow: none; border: 0px;
-    .cards-img{ overflow: hidden; @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.29)); border-radius: 10px; 
-        border: 2px solid rgba(255,255,255,0);
-        figure{ position: relative; padding-top: 74%;
-            img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%; }  
-        }
-        &:hover{ border-color: $secondary_color; @include transition-prefixes(0.3s); }
-    }
-    .cards-body{ padding: 20px 0 15px;
-        .heading-3{line-height: 1.45; 
-            a{ text-decoration: none; color: $black_color;
-                &:hover{ text-decoration: underline; }
-            }
-        }
-    }
-}
-
-.tag-list{
-    .tags{ display: inline-flex; background-color: $white_color; box-shadow: 0 0 12px 0 rgba(0,0,0,0.2); border-radius: 16px;
-        border: 2px solid transparent; padding: 0px 10px 2px; font-size: 1.4rem;  color: $black_color; text-decoration: none;
-        &:hover{ border-color: $secondary_color; background-color: $secondaryHover_color; }
-    }
-}
-
-
-
-// ======== on-section-insta-feed
-.on-section-insta-feed{}
-.insta-bg-wrap{ position: absolute; top: 0; right: 0; left: 0; height: 100%; z-index: 0;
-    img{object-fit: cover; height: 100%; width: 100%;  @include transition-prefixes(0.3s); }
-}
-.insta-feed{ padding: 12px 0;
-    .next-prev-sider{ margin-top: 55px; }
-}
-.cards.insta-cards{ border-color: transparent;  background-color: $white_color;
-    &:hover{ border-color: $secondary_color;}
-    .cards-img{  position: relative;
-        img{ @include transition-prefixes(0.3s);} 
-        &::after{ @include afterbefore();  @include transition-prefixes(0.3s);}
-        &:hover{
-            &::after{ background-color: rgba(0,0,0,0.6);}
-            img{transform: scale(1.05);}
-        }
-  }
-}
-
-
-// on-section-contact
-.on-section-contact{ padding-top: 60px; padding-bottom: 60px; background: $site-bg-light url(../images/ontario/gray-arch-white-bg.png) no-repeat center 0;
-    background-size: contain;
-    @include breakpoint('lg', min) { padding-top: 100px; padding-bottom: 80px;}
-    .list-icon-btn-wrap li{
-        @include breakpoint('lg', max) { margin-bottom: 0; }
-        @include breakpoint('md', max) { width: 100%; }
-    }
-   .gap-20{ gap: 20px;}
-   
-}

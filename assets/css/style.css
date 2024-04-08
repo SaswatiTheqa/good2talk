@@ -73,12 +73,14 @@ a:hover {
 }
 .btn.site-btn {
   border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
   position: relative;
   font-size: 1.6rem;
   line-height: 1.63;
   font-weight: 700;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
-  padding: 11px 20px;
+  padding: 8px 20px;
   min-height: 52px;
 }
 @media screen and (min-width: 992px) {
@@ -100,6 +102,10 @@ a:hover {
 .btn.site-btn.btn-rightarrow .right-icon {
   position: absolute;
   right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 16px;
 }
 @media (max-width: 991px) {
   .btn.site-btn.btn-rightarrow .right-icon {
@@ -114,6 +120,16 @@ a:hover {
 .btn.site-btn .btn-text {
   margin-left: 20px;
   margin-right: 20px;
+}
+.btn.site-btn.btnsm {
+  font-size: 1.4rem;
+  line-height: 1.15;
+}
+@media screen and (min-width: 992px) {
+  .btn.site-btn.btnsm {
+    font-size: 1.4rem;
+    line-height: 1.143;
+  }
 }
 .btn.site-btn-pri-bg {
   background-color: #6dc8bf;
@@ -518,7 +534,7 @@ a:hover {
 @media screen and (min-width: 992px) {
   .heading-3 {
     font-size: 1.8rem;
-    line-height: 1.15;
+    line-height: 1.45;
   }
 }
 
@@ -528,6 +544,10 @@ a:hover {
 
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.mt-30 {
+  margin-top: 30px;
 }
 
 .cmn-py-90 {
@@ -590,7 +610,13 @@ a:hover {
   background-position: center bottom;
   background-size: auto;
   background-color: #F4F2EC;
-  padding: 97px 0 150px 0;
+  padding: 160px 0 150px 0;
+  margin-top: -150px;
+}
+@media (min-width: 992px) {
+  .section-banner {
+    margin-top: -137px;
+  }
 }
 @media (max-width: 991px) {
   .section-banner {
@@ -603,6 +629,11 @@ a:hover {
 @media (max-width: 991px) {
   .section-banner.section-banner-main {
     background-image: url(../images/homepage-header-bg-m.png);
+  }
+}
+@media (min-width: 992px) {
+  .section-banner.section-banner-main {
+    margin-top: -197px;
   }
 }
 .section-banner.section-banner-on {
@@ -798,12 +829,41 @@ a:hover {
   background: url(../images/quote-bg-3.svg) no-repeat left bottom;
 }
 
+.on-section-support-service .heading-holder {
+  max-width: 340px;
+}
+
 .support-cards {
   background-color: #fff;
   border-radius: 9px;
   padding: 20px 12px;
   height: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+}
+.support-cards .media-img {
+  margin-right: 2rem;
+}
+.support-cards .button-holder {
+  margin-top: auto;
+}
+.support-cards .cards-body {
+  flex: 1 1 auto;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.support-cards .button-holder .btn.site-btn.btn-rightarrow {
+  padding-right: 47px;
+}
+
+.on-section-connexOntario .connex-img {
+  margin-top: -100px;
+}
+@media (min-width: 992px) {
+  .on-section-connexOntario .connex-img {
+    margin-top: -140px;
+  }
 }
 
 .cards.resources-cards {

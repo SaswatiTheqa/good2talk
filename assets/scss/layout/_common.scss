@@ -17,6 +17,7 @@
 .mb-30{ margin-bottom: 30px;}
 .mb-60{ margin-bottom: 60px;}
 
+.mt-30{ margin-top: 30px;}
 // common padding top bottom
 .cmn-py-90{ padding: 60px 0;
     @include breakpoint('lg', min) { padding: 90px 0; }
@@ -27,14 +28,15 @@
 
 
 
-
+// cards
 .cards{ padding: 20px; border-radius: 10px; border: 2px solid rgba(255,255,255,0); outline: 0;
     @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.29)); @include transition-prefixes(0.3s); 
     &:hover{ border-color: $secondary_color; @include transition-prefixes(0.3s); }
-    .cards-img{}
     .cards-body{ line-height: 1.5; text-align: left; padding: 20px ; }
 }
 
+
+// gb-container-image-wrap
 .gb-container-image-wrap{ position: absolute; top: 0; right: 0; left: 0; height: 100%; z-index: 0;
     .gb-container-image{object-fit: cover; height: 100%; width: 100%; transition: .3s ease;}
     & .h-auto{ height: auto;}
