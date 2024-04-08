@@ -2,8 +2,33 @@
     @include breakpoint('lg', max) {
         padding-top: 17px;
     }
-    .quick-links .site-language a{color: $black_color; @include font-size($font-size-body);
-        &:hover{ color: $primary_color;  }
+    .quick-links {
+      .site-language { margin-left: 30px;
+            a{color: $black_color; @include font-size($font-size-body);
+                &:hover{ color: $primary_color;  }
+            }
+        }
+       .places-selection select {border: 2px solid #f79548; 
+        border-radius: 50px;
+        min-width: 130px;
+        font-weight: 700;
+        padding-left: 7px;
+        padding-right: 25px;
+        height: 30px;
+        background-image: url(../images/icon/accodion-down-arrrow-icon.svg);
+        background-position: right 7px center;
+        background-repeat: no-repeat;
+        background-size: 13px auto;
+        background-color: transparent;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .search-site {
+        border: 0;
+        background: 0;
+        margin-left: 15px;
+        padding: 0;
+      }
     }
     .logo{ 
         a {

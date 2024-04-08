@@ -58,7 +58,7 @@
 .insta-bg-wrap{ position: absolute; top: 0; right: 0; left: 0; height: 100%; z-index: 0;
     img{object-fit: cover; height: 100%; width: 100%;  @include transition-prefixes(0.3s); }
 }
-.insta-feed{ padding: 12px 0;
+.insta-feed{ padding: 24px 0 12px;
     .next-prev-sider{ margin-top: 55px; }
 }
 .cards.insta-cards{ border-color: transparent;  background-color: $white_color;

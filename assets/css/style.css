@@ -266,6 +266,9 @@ a:hover {
     padding-top: 17px;
   }
 }
+.main-header .quick-links .site-language {
+  margin-left: 30px;
+}
 .main-header .quick-links .site-language a {
   color: #000;
   font-size: 1.6rem;
@@ -279,6 +282,28 @@ a:hover {
 }
 .main-header .quick-links .site-language a:hover {
   color: #6dc8bf;
+}
+.main-header .quick-links .places-selection select {
+  border: 2px solid #f79548;
+  border-radius: 50px;
+  min-width: 130px;
+  font-weight: 700;
+  padding-left: 7px;
+  padding-right: 25px;
+  height: 30px;
+  background-image: url(../images/icon/accodion-down-arrrow-icon.svg);
+  background-position: right 7px center;
+  background-repeat: no-repeat;
+  background-size: 13px auto;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.main-header .quick-links .search-site {
+  border: 0;
+  background: 0;
+  margin-left: 15px;
+  padding: 0;
 }
 .main-header .logo a img {
   width: 119px;
@@ -947,7 +972,7 @@ a:hover {
 }
 
 .insta-feed {
-  padding: 12px 0;
+  padding: 24px 0 12px;
 }
 .insta-feed .next-prev-sider {
   margin-top: 55px;
