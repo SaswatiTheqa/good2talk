@@ -4,7 +4,13 @@
 
 // *{outline:none !important;}
 // a, a:hover, a:visited{color: $PrimaryThemeColor ;}
-body{ font-family: $siteFont; font-size: torem(16); }
+
+html { font-size: 10px;}
+h1, h2,  h3, h4{margin-bottom: 30px;}
+
+// font-size:  rem(16)
+body{ font-family: $siteFont; @include font-size($font-size-body); background: #fffdf8; }
+p{ @include font-size($font-size-body); font-weight: $fontBook;  color: $body_color;} 
 figure{ margin-bottom: 0;}
 img{width:auto; max-width:100%; height:auto;border:0;}
 a{ color: $body_color; }

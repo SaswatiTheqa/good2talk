@@ -1,335 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good2talk</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="assets/css/style.css" rel="stylesheet">
-</head>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Good2talk</title>
+       <!-- Style link -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <link href="assets/css/style.css" rel="stylesheet">
 
-<body>
-    <header class="main-header w-100 position-absolute cmn-cn-p-m">
-        <div class="container position-relative">
-			<div class="row align-items-start">
-				<div class="col-6 col-lg-6">
-					<div class="logo">
-						<a href="#"><img src="https://good2talk.ca/wp-content/uploads/2021/12/good2talk-logo.svg" alt="Good2TalkLogo" aria-labelledby="Good2TalkLogo"></a>
-					</div>
-				</div>
-				<div class="col-6 col-lg-6">
-					<div class="quick-links d-flex justify-content-end">
-                        <div class="site-language">
-                            <a href="#" class="language-toggle">Français</a>
-                        </div>
-                    </div>
-				</div>
-			</div>
-		</div>
-    </header>
-    <section class="section section-banner cmn-cn-p-m">
-        <div class="container">
+   </head>
+   <body>
+      <!-----header------>
+      <header class="main-header w-100 position-absolute cmn-con-pad-m">
+         <div class="container position-relative">
+            <div class="row align-items-start">
+               <div class="col-6 col-lg-6">
+                  <div class="logo">
+                     <a href="javascript void(0)"><img src="assets/images/good2talk-logo.svg" alt="Good2TalkLogo" aria-labelledby="Good2TalkLogo"></a>
+                  </div>
+               </div>
+               <div class="col-6 col-lg-6">
+                  <div class="quick-links d-flex justify-content-end">
+                     <div class="site-language">
+                        <a href="javascript void(0)" class="language-toggle">Français</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-----section-banner------>
+      <section class="section section-banner section-banner-main cmn-con-pad-m">
+         <div class="container">
             <div class="row">
-                <div class="col-sm-5 order-2 order-md-1 d-flex align-items-center">
-                    <div class="caption">
-                        <h1 class="heading-2">Good2Talk provides free, confidential support services for post-secondary students in Ontario and Nova Scotia</h1>
-                        <div class="col-md-11 col-lg-8">
-                            <div class="input-group input-select">
-                                <select class="form-select" id="provinceSelect" aria-label="Choose province">
-                                    <option value="" selected="">Choose province</option>
-                                    <option value="Ontario">Ontario</option>
-                                    <option value="NovaScotia">Nova Scotia</option>
-                                </select>
-                                <button class="go-btn" id="provinceGo" type="button" >Go</button>
-                            </div>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-sm-7 order-1 order-md-2">
-                    <img src="assets/images/homepage-header-image.png" alt="" class="img-fluid">
-                </div>
+               <div class="col-sm-5 order-2 order-md-1 d-flex align-items-center">
+                  <div class="caption">
+                     <h1 class="heading-2">Good2Talk provides free, confidential support services for post-secondary students in Ontario and Nova Scotia</h1>
+                     <div class="col-md-11 col-lg-8">
+                        <div class="input-group input-select">
+                           <select class="form-select" id="provinceSelect" aria-label="Choose province">
+                              <option value="" selected="">Choose province</option>
+                              <option value="Ontario">Ontario</option>
+                              <option value="NovaScotia">Nova Scotia</option>
+                           </select>
+                           <button class="go-btn" id="provinceGo" type="button" >Go</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-7 order-1 order-md-2">
+                  <img src="assets/images/homepage-header-image.png" alt="" class="img-fluid">
+               </div>
             </div>
             <div class="section-support">
-                <div class="row">
-                    <div class="col-12 col-lg-10 mx-auto">
-                        <div class="row gx-5">
-                            <div class="col-12 col-lg-6 col-sm-6 mb-30 mb-sm-0">
-                                <div class="support-box-wrap">
-                                    <div class="support-box-wrap-header">
-                                        <h2 class="heading-3">Support in Ontario</h2>
-                                    </div>  
-                                    <div class="support-box-wrap-body">
-                                        <ul class="list-unstyled list-icon-btn-wrap">
-                                            <li>
-                                                <a href="tel:18669255454"  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
-                                                    <span class="list-icon">
-                                                        <img src="assets/images/icon/on-call-circle-icon.svg" alt="" >
-                                                    </span>
-                                                    <span class="btn-text" >Call 1-866-925-5454</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="tel:18669255454"  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
-                                                    <span class="list-icon">
-                                                        <img src="assets/images/icon/on-text-circle-icon.svg" alt="" >
-                                                    </span>
-                                                    <span class="btn-text">Text GOOD2TALKON to 686868</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="sms:18669255454"  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
-                                                    <span class="list-icon">
-                                                        <img src="assets/images/icon/web-message.svg" alt="" >
-                                                    </span>
-                                                    <span class="btn-text">Message Good2Talk online</span>
-                                                    <span class="right-icon">
-                                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href=""  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
-                                                    <span class="list-icon">
-                                                        <img src="assets/images/icon/on-p2p-circle-icon.svg" alt="" >
-                                                    </span>
-                                                    <span class="btn-text">Peer-to-Peer Community</span>
-                                                    <span class="right-icon">
-                                                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>  
-                                </div>  
-                            </div>
-                            <div class="col-12 col-lg-6 col-sm-6">
-                            <div class="support-box-wrap">
-                                <div class="support-box-wrap-header">
-                                    <h2 class="heading-3">Support in Nova Scotia</h2>
-                                </div>  
-                                <div class="support-box-wrap-body">
-                                    <ul class="list-unstyled list-icon-btn-wrap">
-                                        <li>
-                                            <a href="tel:18669255454"  target="_blank" class="btn btn-rightarrow site-btn list-btn w-100 site-btn-pri-bg" role="button">
-                                                <span class="list-icon">
-                                                    <img src="assets/images/icon/ns-call-circle-icon.svg" alt="">
-                                                </span>
-                                                <span class="btn-text">Call 1-866-925-5454</span>
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="tel:18669255454"  target="_blank" class="btn btn-rightarrow site-btn list-btn w-100 site-btn-pri-bg" role="button">
-                                                <span class="list-icon">
-                                                    <img src="assets/images/icon/ns-text-circle-icon.svg" alt="">
-                                                </span>
-                                                <span class="btn-text">Text GOOD2TALKNS to 686868</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>  
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>      
-             </div>
-        </div>
-   </section>
-
-   
-   <!-----section-support-post-secondary------>
-    <section class="section section-support-post-secondary site-bg-light cmn-cn-p-m">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-10 mx-auto">
-                    <div class="row  gx-5">
-                        <div class="col-12 col-lg-6 col-sm-6">
-                            <div class="support_block">
-                                <h2 class="heading-2">Support for post-secondary students in Ontario</h2>
-                                <p>Good2Talk offers free, confidential support to post-secondary students in Ontario 24/7.</p>
-                                <div class="button-holder">
-                                    <a role="button" class="btn btn-rightarrow site-btn site-btn-sec-bg">Discover Good2Talk Ontario 
-                                        <span class="right-icon">
-                                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 col-sm-6 mt-5 mt-sm-0">
-                            <div class="support_block">
-                                <h2 class="heading-2">Support for post-secondary students in Ontario</h2>
-                                <p>Good2Talk offers free, confidential support to post-secondary students in Ontario 24/7.</p>
-                                <div class="button-holder">
-                                    <a role="button" class="btn btn-rightarrow site-btn site-btn-pri-bg">Discover Good2Talk Ontario 
-                                        <span class="right-icon">
-                                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>        
-        </div>
-    </section>
-
-    <!-----section-post-secondary------>
-    <section class="section section-post-secondary position-relative cmn-cn-p-m">
-        <div class="carve-bg">
-            <img src="assets/images/white-arch-gray-bg.png" alt="">
-        </div>
-        <div class="slider-sec">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-8 mx-auto">
-                        <h2 class="heading-2 text-center">How are post-secondary students feeling about Good2Talk?</h2>
-                    </div>
-                </div> 
-                <div class="slider-students-feeling">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                           <div class="swiper-slide">
-                                <div class="cards quote-cards">                
-                                    <div class="quote-card-header">
-                                        <span class="quote-icon" aria-hidden="true"></span>                
-                                    </div>
-                                    <div class="quote-card-body">
-                                        The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            </div>
-                                    <div class="quote-card-footer"></div>
-                                </div>
+               <div class="row">
+                  <div class="col-12 col-lg-10 mx-auto">
+                     <div class="row gx-5">
+                        <div class="col-12 col-lg-6 col-sm-6 mb-30 mb-sm-0">
+                           <div class="support-box-wrap">
+                              <div class="support-box-wrap-header">
+                                 <h2 class="heading-3">Support in Ontario</h2>
+                              </div>
+                              <div class="support-box-wrap-body">
+                                 <ul class="list-unstyled list-icon-btn-wrap">
+                                    <li>
+                                       <a href="tel:18669255454"  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
+                                       <span class="list-icon">
+                                       <img src="assets/images/icon/on-call-circle-icon.svg" alt="" >
+                                       </span>
+                                       <span class="btn-text" >Call 1-866-925-5454</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="tel:18669255454"  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
+                                       <span class="list-icon">
+                                       <img src="assets/images/icon/on-text-circle-icon.svg" alt="" >
+                                       </span>
+                                       <span class="btn-text">Text GOOD2TALKON to 686868</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="sms:18669255454"  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
+                                       <span class="list-icon">
+                                       <img src="assets/images/icon/web-message.svg" alt="" >
+                                       </span>
+                                       <span class="btn-text">Message Good2Talk online</span>
+                                       <span class="right-icon">
+                                       <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                       </span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href=""  target="_blank" class="btn list-btn site-btn site-btn-sec-bg btn-rightarrow  w-100" role="button">
+                                       <span class="list-icon">
+                                       <img src="assets/images/icon/on-p2p-circle-icon.svg" alt="" >
+                                       </span>
+                                       <span class="btn-text">Peer-to-Peer Community</span>
+                                       <span class="right-icon">
+                                       <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                       </span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
                            </div>
-                           <div class="swiper-slide">
-                                <div class="cards quote-cards">                
-                                    <div class="quote-card-header">
-                                        <span class="quote-icon" aria-hidden="true"></span>                
-                                    </div>
-                                    <div class="quote-card-body">
-                                        Exactly what I needed, exactly when I needed it.</div>
-                                    <div class="quote-card-footer"></div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cards quote-cards">                
-                                    <div class="quote-card-header">
-                                        <span class="quote-icon" aria-hidden="true"></span>                
-                                    </div>
-                                    <div class="quote-card-body">
-                                        The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            </div>
-                                    <div class="quote-card-footer"></div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                        <div class="cards quote-cards">                
-                                            <div class="quote-card-header">
-                                                <span class="quote-icon" aria-hidden="true"></span>                
-                                            </div>
-                                            <div class="quote-card-body">
-                                                The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            </div>
-                                            <div class="quote-card-footer"></div>
-                                        </div>
-                                </div>
-                                    <div class="swiper-slide">
-                                        <div class="cards quote-cards">                
-                                            <div class="quote-card-header">
-                                                <span class="quote-icon" aria-hidden="true"></span>                
-                                            </div>
-                                            <div class="quote-card-body">
-                                                The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            </div>
-                                            <div class="quote-card-footer"></div>
-                                        </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="cards quote-cards">                
-                                        <div class="quote-card-header">
-                                            <span class="quote-icon" aria-hidden="true"></span>                
-                                        </div>
-                                        <div class="quote-card-body">
-                                            
-                                Very helpful conversation, first time using the service after a lot of issues. I appreciate you making yourself available overnight for people! 
-                                It can feel shameful/intimidating to reach out so the positive/affirming/kind approach helped!                             </div>
-                                        <div class="quote-card-footer"></div>
-                                    </div>
-                            </div>
-                                <div class="swiper-slide">
-                                    <div class="cards quote-cards">                
-                                        <div class="quote-card-header">
-                                            <span class="quote-icon" aria-hidden="true"></span>                
-                                        </div>
-                                        <div class="quote-card-body">
-                                            The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            </div>
-                                        <div class="quote-card-footer"></div>
-                                    </div>
-                            </div>
                         </div>
-                    </div>  
-                    <div class="next-prev-sider mx-auto">
-                       
-                       <div class="swiper-button-prev"><i class="fas fa-arrow-left"></i></div> 
-                       <div class="swiper-button-next"><i class="fas fa-arrow-right"></i></div>
-                    </div>  
-                </div>       
+                        <div class="col-12 col-lg-6 col-sm-6">
+                           <div class="support-box-wrap">
+                              <div class="support-box-wrap-header">
+                                 <h2 class="heading-3">Support in Nova Scotia</h2>
+                              </div>
+                              <div class="support-box-wrap-body">
+                                 <ul class="list-unstyled list-icon-btn-wrap">
+                                    <li>
+                                       <a href="tel:18669255454"  target="_blank" class="btn btn-rightarrow site-btn list-btn w-100 site-btn-pri-bg" role="button">
+                                       <span class="list-icon">
+                                       <img src="assets/images/icon/ns-call-circle-icon.svg" alt="">
+                                       </span>
+                                       <span class="btn-text">Call 1-866-925-5454</span>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="tel:18669255454"  target="_blank" class="btn btn-rightarrow site-btn list-btn w-100 site-btn-pri-bg" role="button">
+                                       <span class="list-icon">
+                                       <img src="assets/images/icon/ns-text-circle-icon.svg" alt="">
+                                       </span>
+                                       <span class="btn-text">Text GOOD2TALKNS to 686868</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
-
-    <!-----footer------>
-    <footer class="footer footer-main position-relative cmn-cn-p-m">
-        <div class="container position-relative">
-          <div class="row gx-5 footer-row">
-            <div class="col-md-3 d-flex justify-content-center justify-content-lg-start footer-col">
-              <a href=""><img src="assets/images/good2talk-logo.svg" class="footer-logo" alt="Good 2 Talk Logo"></a>
+         </div>
+      </section>
+      <!-----section-support-post-secondary------>
+      <section class="section section-support-post-secondary site-bg-light cmn-con-pad-m">
+         <div class="container">
+            <div class="row">
+               <div class="col-12 col-lg-10 mx-auto">
+                  <div class="row  gx-5">
+                     <div class="col-12 col-lg-6 col-sm-6">
+                        <div class="support_block">
+                           <h2 class="heading-2">Support for post-secondary students in Ontario</h2>
+                           <p>Good2Talk offers free, confidential support to post-secondary students in Ontario 24/7.</p>
+                           <div class="button-holder">
+                              <a role="button" class="btn btn-rightarrow site-btn site-btn-sec-bg">Discover Good2Talk Ontario 
+                              <span class="right-icon">
+                              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                              </span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-lg-6 col-sm-6 mt-5 mt-sm-0">
+                        <div class="support_block">
+                           <h2 class="heading-2">Support for post-secondary students in Ontario</h2>
+                           <p>Good2Talk offers free, confidential support to post-secondary students in Ontario 24/7.</p>
+                           <div class="button-holder">
+                              <a role="button" class="btn btn-rightarrow site-btn site-btn-pri-bg">Discover Good2Talk Ontario 
+                              <span class="right-icon">
+                              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                              </span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-3">
-              <nav class="footer-nav d-flex flex-wrap justify-content-center justify-content-lg-start">
-                <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-start">
-                  <li><a href="">Sitemap</a></li>
-                  <li><a href="" class="ext-icon">Privacy policy <span ><i class="fas fa-arrow-right" aria-hidden="true"></i></span></a></li>
-                </ul>
-              </nav>
+         </div>
+      </section>
+      <!-----section-post-secondary------>
+      <section class="section section-post-secondary position-relative cmn-con-pad-m">
+         <div class="carve-bg">
+            <img src="assets/images/white-arch-gray-bg.png" alt="">
+         </div>
+         <div class="slider-sec">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12 col-lg-8 mx-auto">
+                     <h2 class="heading-2 text-center">How are post-secondary students feeling about Good2Talk?</h2>
+                  </div>
+               </div>
+               <div class="slider-students-feeling">
+                  <div class="swiper-container">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <div class="cards quote-cards">
+                              <div class="quote-card-header">
+                                 <span class="quote-icon" aria-hidden="true"></span>                
+                              </div>
+                              <div class="quote-card-body">
+                                 The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            
+                              </div>
+                              <div class="quote-card-footer"></div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cards quote-cards">
+                              <div class="quote-card-header">
+                                 <span class="quote-icon" aria-hidden="true"></span>                
+                              </div>
+                              <div class="quote-card-body">
+                                 Exactly what I needed, exactly when I needed it.
+                              </div>
+                              <div class="quote-card-footer"></div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cards quote-cards">
+                              <div class="quote-card-header">
+                                 <span class="quote-icon" aria-hidden="true"></span>                
+                              </div>
+                              <div class="quote-card-body">
+                                 The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            
+                              </div>
+                              <div class="quote-card-footer"></div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cards quote-cards">
+                              <div class="quote-card-header">
+                                 <span class="quote-icon" aria-hidden="true"></span>                
+                              </div>
+                              <div class="quote-card-body">
+                                 The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            
+                              </div>
+                              <div class="quote-card-footer"></div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cards quote-cards">
+                              <div class="quote-card-header">
+                                 <span class="quote-icon" aria-hidden="true"></span>                
+                              </div>
+                              <div class="quote-card-body">
+                                 The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            
+                              </div>
+                              <div class="quote-card-footer"></div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cards quote-cards">
+                              <div class="quote-card-header">
+                                 <span class="quote-icon" aria-hidden="true"></span>                
+                              </div>
+                              <div class="quote-card-body">
+                                 Very helpful conversation, first time using the service after a lot of issues. I appreciate you making yourself available overnight for people! 
+                                 It can feel shameful/intimidating to reach out so the positive/affirming/kind approach helped!                             
+                              </div>
+                              <div class="quote-card-footer"></div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="cards quote-cards">
+                              <div class="quote-card-header">
+                                 <span class="quote-icon" aria-hidden="true"></span>                
+                              </div>
+                              <div class="quote-card-body">
+                                 The Crisis Responder was really helpful lol and I didn’t feel any judgement from them when I was explaining myself and how u felt. They really created a safe space.                            
+                              </div>
+                              <div class="quote-card-footer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="next-prev-sider mx-auto">
+                     <button class="swiper-button-prev"><i class="fas fa-arrow-left"></i></button>
+                     <button class="swiper-button-next"><i class="fas fa-arrow-right"></i></button>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-4">
-              Services in Ontario and Nova Scotia
-              <div class="input-group mt-5 input-select">
-                <select class="form-select" aria-label="Choose province">
-                  <option value="" selected="">Choose province</option>
-                  <option value="">Ontario</option>
-                  <option value="">Nova Scotia</option>
-                </select>
-                <button class="btn go-btn site-btn-sec-bg" type="button">Go</button>
-              </div>
+         </div>
+      </section>
+      <!-----footer------>
+      <footer class="footer footer-main position-relative cmn-con-pad-m">
+         <div class="container position-relative">
+            <div class="row gx-5 footer-row">
+               <div class="col-md-3 d-flex justify-content-center justify-content-lg-start footer-col">
+                  <a href=""><img src="assets/images/good2talk-logo.svg" class="footer-logo" alt="Good 2 Talk Logo"></a>
+               </div>
+               <div class="col-md-3">
+                  <nav class="footer-nav d-flex flex-wrap justify-content-center justify-content-lg-start">
+                     <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-start">
+                        <li><a href="javascript void(0)">Sitemap</a></li>
+                        <li><a href="javascript void(0)" class="ext-icon">Privacy policy <span ><i class="fas fa-arrow-right" aria-hidden="true"></i></span></a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="col-md-4">
+                  Services in Ontario and Nova Scotia
+                  <div class="input-group mt-5 input-select">
+                     <select class="form-select" aria-label="Choose province">
+                        <option value="" selected="">Choose province</option>
+                        <option value="">Ontario</option>
+                        <option value="">Nova Scotia</option>
+                     </select>
+                     <button class="btn go-btn site-btn-sec-bg" type="button">Go</button>
+                  </div>
+               </div>
+               <div class="col-md-2 d-flex justify-content-center justify-content-lg-start">
+                  <div class="pride-icon">
+                     <a href="javascript void(0)"><img src="assets/images/lgbtq2s-icon.svg" alt="Pride Icon"></a>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-2 d-flex justify-content-center justify-content-lg-start">
-              <div class="footer-img">
-                <a href="#"><img src="assets/images/lgbtq2s-icon.svg" alt="Pride Icon"></a>
-              </div>
+            <div class="copyright text-center text-md-start">
+               © 2024 Good2Talk. All Rights Reserved. 
             </div>
-          </div>
-          <div class="copyright text-center">
-            © 2024 Good2Talk. All Rights Reserved.      </div>
-    
-          <div id="scrollTop" class="scrollTop">
-            <a href="javascript:void(0)" role="button" aria-label="scroll to the top of the page">
-                <i class="fa fa-angle-up"></i></a>
-          </div>
-        </div>
+            <div id="scrollTop" class="scrollTop">
+               <a href="javascript:void(0)" role="button" aria-label="scroll to the top of the page">
+               <i class="fa fa-angle-up"></i></a>
+            </div>
+         </div>
+      </footer>
+      <!-- exit -->
+      <div id="exit" class="exit" >
+         <a href="https://www.google.com/" target="" role="button" aria-label="Leave this site"><img class="mx-auto" src="assets/images/icon/new-tab-black-icon.svg" alt="New tab black icon" role="presentation">Exit</a>
+      </div>
 
-    </footer>
-    
-    
-    <div id="exit" class="exit" >
-        <a href="https://www.google.com/" target="" class="btn" role="button" aria-label="Leave this site"><img class="mx-auto" src="assets/images/icon/new-tab-black-icon.svg" alt="New tab black icon" role="presentation">Exit</a>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="assets/js/mainframe.js"></script>
-
-</body>
+      <!-- script -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="assets/js/mainframe.js"></script>
+   </body>
 </html>

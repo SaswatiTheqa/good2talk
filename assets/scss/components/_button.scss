@@ -12,12 +12,16 @@
                 padding-right: 30px;
             }
         }
+        .btn-text{ margin-left: 20px; margin-right: 20px;}
     }
     &.site-btn-pri-bg{ background-color: $primary_color; color: $black_color; border-color: $primary_color;
         &:hover{ background-color: $primaryHover_color;}
     }
     &.site-btn-sec-bg{ background-color: $secondary_color; border-color: $secondary_color;
         &:hover{ background-color: $secondaryHover_color;}
+    }
+    &.site-btn-white-bg{ background-color: $white_color; border-color: $white_color; 
+        &:hover{ background-color: $secondaryHover_color; border-color: $secondary_color;}
     }
     
 }

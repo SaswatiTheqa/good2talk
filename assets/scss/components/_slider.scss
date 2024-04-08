@@ -1,0 +1,17 @@
+// prev-sider btn
+.next-prev-sider{ position: relative; width: 130px; display: flex; justify-content: space-between; height: 54px; margin-top: 35px;
+    & > *{  @include round(52px); position: relative; right: inherit; left:inherit; 
+        @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.16));
+            border: 2px solid $white_color; @include transition-prefixes(0.3s); background: $white_color;  font-size: 16px; color: $black_color; border: 2px solid $white_color;
+            &:hover{ background-color:  $secondaryHover_color; border-color: $secondary_color;}
+            &:after{ display: none; }
+            svg{ width: 17px; }
+            &.swiper-button-disabled{ opacity: 1;
+                & > *{  opacity: .35;}
+             }
+    }
+}
+.swiper-slide-height-auto{height: auto;
+	& >*{height: 100%; }
+
+}

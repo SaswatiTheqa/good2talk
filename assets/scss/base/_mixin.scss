@@ -1,4 +1,4 @@
-// ================== Font Size with Sass Maps
+// ================== Responsive Font Size with Sass Maps
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {  
   @each $fs-breakpoint, $fs-font-size in $fs-map {
@@ -66,7 +66,7 @@
     }  
   }
 }
-
+// ============= breakpoint media end
 
 @mixin transition-prefixes($transitonVal) {
   transition: all ease-in-out $transitonVal;
@@ -79,7 +79,7 @@
   box-shadow: $x $y $blur $spread $color;
 }
 
-// round
+// round 
 @mixin round($size, $radius: $size * 0.5) {
     width: $size;
     height: $size;
@@ -91,14 +91,14 @@
   
 
 // font size
-@function torem($value) {
-    $remValue: ($value / 10) + rem; 
-    @return $remValue;
-}
+// @function torem($value) {
+//     $remValue: ($value / 10) + rem; 
+//     @return $remValue;
+// }
 
 /// Convert PX to REM function
-// $baseFontSize: 10;
 
+// $baseFontSize: 10;
 // @function rem($pixels, $context: $baseFontSize) {
 //     @if (unitless($pixels)) {
 //         $pixels: $pixels * 1px;
@@ -108,6 +108,7 @@
 //     }
 //     @return $pixels / $context * 1rem;
 // }
+
 
 @mixin afterbefore {
   content: "";

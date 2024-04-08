@@ -1,25 +1,41 @@
 
-html {
-    font-size: 10px;
-}
-h1, h2,  h3,  h4{margin-bottom: 30px;}
 @include breakpoint('xl', min) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{ max-width: 1140px;}
 }
+
 @include breakpoint('lg', max) {
-    .cmn-cn-p-m{
+    .cmn-con-pad-m{
         .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{padding-left: 20px; padding-right: 20px}
     }
 }
 
-p{ @include font-size($font-size-body); font-weight: $fontBook;  color: $body_color;} 
-
-.heading-2{ @include font-size($font-size-h2);  font-weight: $fontBold; color: $black_color; }
+// heading text
+.heading-1{ @include font-size($font-size-h1); font-weight: $fontBold; color: $black_color; }
+.heading-2{ @include font-size($font-size-h2); font-weight: $fontBold; color: $black_color; }
 .heading-3{ @include font-size($font-size-h3); font-weight: $fontBold; color: $black_color; }
 
 .mb-30{ margin-bottom: 30px;}
+.mb-60{ margin-bottom: 60px;}
 
+// common padding top bottom
+.cmn-py-90{ padding: 60px 0;
+    @include breakpoint('lg', min) { padding: 90px 0; }
+}
 
+// bg-color
 .site-bg-light{background-color: $site-bg-light;}
 
 
+
+
+.cards{ padding: 20px; border-radius: 10px; border: 2px solid rgba(255,255,255,0); outline: 0;
+    @include box-shadow(0, 0, 24px, 0, rgba(0,0,0,0.29)); @include transition-prefixes(0.3s); 
+    &:hover{ border-color: $secondary_color; @include transition-prefixes(0.3s); }
+    .cards-img{}
+    .cards-body{ line-height: 1.5; text-align: left; padding: 20px ; }
+}
+
+.gb-container-image-wrap{ position: absolute; top: 0; right: 0; left: 0; height: 100%; z-index: 0;
+    .gb-container-image{object-fit: cover; height: 100%; width: 100%; transition: .3s ease;}
+    & .h-auto{ height: auto;}
+} 
