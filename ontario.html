@@ -11,15 +11,15 @@
 </head>
 
 <body>
-    <header class="main-header w-100 cmn-con-pad-m">
+    <header class="main-header on-header w-100 cmn-con-pad-m">
         <div class="container position-relative">
 			<div class="row align-items-start">
-				<div class="col-6 col-lg-6">
+				<div class="col-6 col-lg-2">
 					<div class="logo">
 						<a href="javascript void(0)"><img src="assets/images/on-good2talk-logo.svg" alt="Good 2 Talk Ontario Logo" aria-labelledby="Good2Talk Ontario Logo"></a>
 					</div>
 				</div>
-				<div class="col-6 col-lg-6">
+				<div class="col-6 col-lg-10">
 					<div class="quick-links d-flex justify-content-end">
                         <div class="places-selection">
                             <label for="site-places" class="d-none">Services in</label>
@@ -34,8 +34,59 @@
                         <button class="search-site" aria-label="search" aria-expanded="false">
                             <span class="fas fa-search" aria-hidden="true"></span>
                         </button>
-                        
+                        <div class="header-search-holder">
+                            <!-- <form id="searchForm"> -->
+                               <input type="text" class="form-control" placeholder="Search Good2Talk">
+                               <button class="search-btn" type="submit">
+                                  <i class="fas fa-search" aria-hidden="false"></i>
+                               </button>
+                               <button class="cross-btn">
+                                <i class="fas fa-times" aria-hidden="false"></i>
+                             </button>
+                            <!-- </form> -->
+                        </div>
                     </div>
+                    <nav class="navbar navbar-expand-xl bg-transparent main-menu" id="primary-nav">
+                        <div class="offcanvas-collapse navbar-collapse justify-content-lg-end" id="navbarSupportedContent">
+                          <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                              <ul class="dropdown-menu" aria-labelledby="dropdown_about">
+                                <li> <a class="dropdown-item" href="#">Good2Talk Ontario</a> </li>
+                                <li> <a class="dropdown-item" href="#">Frequently Asked Questions</a> </li>
+                              </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                              <ul class="dropdown-menu" aria-labelledby="dropdown_services">
+                                <li> <a class="dropdown-item" href="#">Calling Good2Talk</a> </li>
+                                <li> <a class="dropdown-item" href="#">Mental health support in 100+ languages</a> </li>
+                                <li> <a class="dropdown-item" href="#">Texting and Messaging Good2Talk Online</a> </li>
+                                <li> <a class="dropdown-item" href="#">Peer-to-Peer community</a> </li>
+                                <li> <a class="dropdown-item" href="#">Student support abroad</a> </li>
+                              </ul>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Well-being resources</a>
+                            </li>
+                            <li class="nav-item">
+                              <a target="_blank" class="nav-link" href="#">
+                                <span role="text">
+                                  <span class="sr-only">Opens in a new tab</span>Campus services directory <span class="ext-icon" aria-hidden="true">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                  </span>
+                                </span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Get involved</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <button class="search-site" aria-label="search" aria-expanded="false">
+                            <span class="fas fa-search" aria-hidden="true"></span>
+                        </button>
+                      </nav>
 				</div>
 			</div>
 		</div>
@@ -107,7 +158,7 @@
             </div>
           </div>
           <div class="row gx-5">
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-sm-6 col-xl-3 mb-30 mb-xl-0">
                 <div class="support-cards">
                     <div class="media d-flex">
                         <div class="media-img flex-shrink-0">
@@ -132,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-sm-6 col-xl-3 mb-30 mb-xl-0">
                 <div class="support-cards">
                     <div class="media d-flex">
                         <div class="media-img flex-shrink-0">
@@ -156,7 +207,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-sm-6 col-xl-3 mb-30 mb-xl-0">
                 <div class="support-cards">
                     <div class="media d-flex">
                         <div class="media-img flex-shrink-0">
@@ -181,7 +232,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-sm-6 col-xl-3 mb-30 mb-xl-0">
                 <div class="support-cards">
                     <div class="media d-flex">
                         <div class="media-img flex-shrink-0">

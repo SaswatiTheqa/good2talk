@@ -18,6 +18,7 @@
 .mb-60{ margin-bottom: 60px;}
 
 .mt-30{ margin-top: 30px;}
+
 // common padding top bottom
 .cmn-py-90{ padding: 60px 0;
     @include breakpoint('lg', min) { padding: 90px 0; }

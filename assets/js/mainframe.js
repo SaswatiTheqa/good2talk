@@ -55,6 +55,31 @@ $(document).ready(function () {
         }, 500);
     });
 
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 300) {
+           $('.on-header').addClass('sticky');
+        } else {
+           $('.on-header').removeClass('sticky');
+        }
+    });
+
+   
+
+    
+
+    /* search form */
+
+    $(".search-site").click(function () {
+        $('.header-search-holder').addClass('d-block');
+        // $(".header-search-holder").animate({
+        //     width: "toggle"
+        //   }, 800);
+    });
+
+    $(".cross-btn").click(function () {
+        $('.header-search-holder').removeClass('d-block');
+    });
+ 
 
     //   provinceGo
     const provinceGo = () => {
@@ -64,6 +89,11 @@ $(document).ready(function () {
         }
     };
     document.querySelector('#provinceGo').addEventListener('click', provinceGo);
+
+    // const searchForm = (e) => {
+    //     e.preventdefault()
+    // };
+    // document.querySelector('#searchForm').addEventListener('click', searchForm);
 
 });
 

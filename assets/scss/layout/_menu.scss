@@ -1,0 +1,54 @@
+.main-menu{
+    .navbar-nav{
+        .nav-item{ position: relative;
+            .nav-link{ position: relative; padding: 15px 30px; color: $black_color; @include font-size($font-size-body); line-height: 1.2rem !important;
+                font-weight: $fontBold;   
+                &::before{ width: 0; height: 2px; background-color: $black_color;  content: ""; position: absolute; bottom: 15px; }  
+                &:hover{
+                    &::before{ width: calc(100% - 60px); }
+                }
+                &.dropdown-toggle {
+                    &::after{ background: url(../images/icon/accodion-down-arrrow-icon.svg) no-repeat; background-size: contain; border: 0px; 
+                        width: 13px; height: 10px; margin-left: 5px; vertical-align: middle; }    
+                }
+                .ext-icon{ transform: rotate(-45deg); position: absolute;}
+            }
+
+            &:last-child{
+                .nav-link{ padding-right: 0px;
+                    &:hover{
+                        &::before{ width: calc(100% - 30px); }
+                    }
+                }
+            }
+            .dropdown-menu{border-radius: 0 15px 15px 15px; background-color: #fffdf8; border: none; margin-top: 0px;padding-top: 20px; padding-bottom: 15px;
+               box-shadow: 0 3px 6px rgba(0,0,0,0.16); 
+               @include breakpoint('xl', min) { width: 270px;  display: block !important; opacity: 0; }
+                li{ padding-bottom: 5px;
+                    a{@include font-size($font-size-body); padding: 3px 30px;}
+                    .dropdown-item{white-space: normal; }
+                }
+            }
+            &.dropdown{
+                &:hover{
+                    .dropdown-menu{ opacity: 1;   }
+                    // &:hover , &.show{ border-radius: 15px 15px 0 0; background-color: #fffdf8;
+                    //     box-shadow: 0 3px 6px  rgba(0,0,0,0.16);
+                    // }
+                    &::after{content: ""; width: 100%; height: 20px;  bottom: -10px; display: inline-block; position: absolute;
+                        left: 0; background-color: #fffdf8; z-index: 1000;}
+                    .nav-link{border-radius: 15px 15px 0 0; background-color: #fffdf8;
+                         box-shadow: 0 3px 6px  rgba(0,0,0,0.16);}
+                }
+                li{
+                    a.dropdown-item{ 
+                        &:hover ,  &:active , &:focus { background-color: transparent; color: $black_color; text-decoration: underline; }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+}
