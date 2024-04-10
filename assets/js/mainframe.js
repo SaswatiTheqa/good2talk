@@ -108,31 +108,29 @@ var scrollPosition = 0;
 var SmallDesktopDown = 1200;
 var SmallDesktopUp = 1199.98;
 
-scrollPosition = window.pageYOffset;
+scrollPosition = window.scrollY;
 window.addEventListener("scroll", function () {
   if (header != null) {
     if (
-      this.window.pageYOffset > header.clientHeight &&
+      this.window.scrollY > header.clientHeight &&
       headerFixed == false &&
-      scrollPosition > this.window.pageYOffset &&
+      scrollPosition > this.window.scrollY &&
       window.innerWidth > SmallDesktopUp
     ) {
       setStickyHeader();
     } else if (
-      scrollPosition < this.window.pageYOffset &&
+      scrollPosition < this.window.scrollY &&
       headerFixed == true &&
       window.innerWidth > SmallDesktopUp ||
-      this.window.pageYOffset < header.clientHeight &&
+      this.window.scrollY < header.clientHeight &&
       headerFixed == true &&
       window.innerWidth > SmallDesktopUp
     ) {
       resetSticyHeader();
     }
   }
-  /*if(window.innerWidth > 767.98){
-    stickyOnThis(scrollPosition);
-  }*/
-  scrollPosition = this.window.pageYOffset;
+
+  scrollPosition = this.window.scrollY;
 });
 function setStickyHeader() {
   if (header != null) {
