@@ -12,9 +12,9 @@
                 @include font-size($font-size-body);
                 @include breakpoint('lg', max) {right: 15px;}
             }
-            @include breakpoint('lg', max) {
-                padding-right: 30px;
-            }
+            // @include breakpoint('lg', max) {
+            //     padding-right: 30px;
+            // }
         }
         .btn-text{ margin-left: 20px; margin-right: 20px;}
         &.btnsm{  @include font-size($font-size-sm);}

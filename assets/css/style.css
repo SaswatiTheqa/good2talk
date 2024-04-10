@@ -120,11 +120,6 @@ a:hover {
     right: 15px;
   }
 }
-@media (max-width: 991px) {
-  .btn.site-btn.btn-rightarrow {
-    padding-right: 30px;
-  }
-}
 .btn.site-btn .btn-text {
   margin-left: 20px;
   margin-right: 20px;
@@ -971,8 +966,17 @@ a:hover {
 @media (max-width: 1199px) {
   .list-icon-btn-wrap li .list-btn {
     line-height: 1;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 991px) {
+  .list-icon-btn-wrap li .list-btn .btn-text {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .list-icon-btn-wrap li .list-btn.btn-rightarrow {
+    padding: 8px 20px;
   }
 }
 .list-icon-btn-wrap li .list-btn .list-icon {
@@ -1012,6 +1016,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1;
   }
 }
 

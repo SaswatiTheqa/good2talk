@@ -49,8 +49,15 @@
               
             }
             @include breakpoint('xl', max) {
-                line-height: 1; padding-top: 8px; padding-bottom: 8px;
-              
+                line-height: 1; padding: 8px 20px; 
+            }
+            @include breakpoint('lg', max) {
+                .btn-text{ margin-left: 0;  }
+            }
+            &.btn-rightarrow{
+                @include breakpoint('xl', max) {
+                  padding: 8px 20px; 
+                }
             }
             .list-icon{ position: absolute; @include round(42px); left: 5px; 
                 img{ width: 100%; height: 100%;}  
@@ -68,7 +75,7 @@
     @include breakpoint('md', min) { max-width: 430px;}
     .button-holder{  margin-top: 30px;
         @include breakpoint('lg', max) {
-            .site-btn{ @include flex-center() }
+            .site-btn{ @include flex-center(); line-height: 1;}
         }
     }
 }
