@@ -71,8 +71,9 @@
 
 .on-header{
     .scrolling-section{ 
-        @include breakpoint('xl', min) { display: none};
+        
         .quick-links{ text-align: right; margin-bottom: 60px;
+            @include breakpoint('xl', min) { display: none};
             .site-language{
             text-align: right;
             margin-bottom: 30px;

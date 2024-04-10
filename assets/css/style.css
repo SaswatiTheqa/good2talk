@@ -423,14 +423,14 @@ a:hover {
   }
 }
 
-@media (min-width: 1200px) {
-  .on-header .scrolling-section {
-    display: none;
-  }
-}
 .on-header .scrolling-section .quick-links {
   text-align: right;
   margin-bottom: 60px;
+}
+@media (min-width: 1200px) {
+  .on-header .scrolling-section .quick-links {
+    display: none;
+  }
 }
 .on-header .scrolling-section .quick-links .site-language {
   text-align: right;
