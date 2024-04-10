@@ -353,6 +353,9 @@ a:hover {
 .main-header.sticky .header-search-holder input {
   background-color: #fffdf8;
 }
+.main-header.sticky .main-menu .navbar-nav .nav-item.dropdown:hover .nav-link {
+  box-shadow: none;
+}
 
 .header-search-holder {
   position: absolute;

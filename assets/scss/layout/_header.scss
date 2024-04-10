@@ -49,6 +49,11 @@
         .header-search-holder{ width: 80%; top:2px;
             input{ background-color: #fffdf8;}
         }
+        .main-menu{ 
+            .navbar-nav .nav-item.dropdown:hover {
+                .nav-link{ box-shadow: none;} 
+            } 
+        }
     }
     
 
