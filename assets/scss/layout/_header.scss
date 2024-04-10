@@ -40,7 +40,6 @@
     }
     .main-menu .search-site{display: none; }
 
-
     &.sticky{position: fixed;  background: #fffdf8; box-shadow: 0 3px 6px rgba(0,0,0,0.16); padding-top: 10px; top: 0px;
         padding-bottom: 10px; z-index: 999;
         .logo a img{ width: 63px; }
@@ -49,15 +48,12 @@
         .header-search-holder{ width: 80%; top:2px;
             input{ background-color: #fffdf8;}
         }
-        .main-menu{ 
-            .navbar-nav .nav-item.dropdown:hover {
-                .nav-link{ box-shadow: none;} 
-            } 
-        }
+        
     }
     
 
 }
+// ============search-holder
 .header-search-holder{ position: absolute; right: 0; left: auto;  display: none; width: 77%; top:0;
     .form-wrapper{  position: relative;}
     input{ border: 0; border-bottom: 1px solid $black_color;  border-radius: 0; color: $black_color; background-color: $primaryHover_color; @include font-size($font-size-body); 
@@ -74,9 +70,9 @@
     }
 }
 
+// ============on header
 .on-header{
     .scrolling-section{ 
-        
         .quick-links{ text-align: right; margin-bottom: 60px;
             @include breakpoint('xl', min) { display: none};
             .site-language{

@@ -353,9 +353,6 @@ a:hover {
 .main-header.sticky .header-search-holder input {
   background-color: #fffdf8;
 }
-.main-header.sticky .main-menu .navbar-nav .nav-item.dropdown:hover .nav-link {
-  box-shadow: none;
-}
 
 .header-search-holder {
   position: absolute;
@@ -512,6 +509,7 @@ a:hover {
     width: 270px;
     display: block !important;
     opacity: 0;
+    visibility: hidden;
   }
 }
 .main-menu .navbar-nav .nav-item .dropdown-menu li {
@@ -538,6 +536,7 @@ a:hover {
 }
 .main-menu .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
   opacity: 1;
+  visibility: visible;
 }
 .main-menu .navbar-nav .nav-item.dropdown:hover::after {
   content: "";
@@ -588,6 +587,10 @@ a:hover {
     transform: translateY(-100%);
   }
 }
+.main-header.sticky .main-menu .navbar-nav .nav-item.dropdown:hover .nav-link {
+  box-shadow: none;
+}
+
 .footer {
   background-repeat: no-repeat;
   background-position: center 0;
