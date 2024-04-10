@@ -42,3 +42,9 @@
     .gb-container-image{object-fit: cover; height: 100%; width: 100%; transition: .3s ease;}
     & .h-auto{ height: auto;}
 } 
+
+.ext-icon{
+    svg , i {
+        transform: rotate(-45deg);
+    }
+}

@@ -8,7 +8,8 @@
             
          }
         &.btn-rightarrow{ padding-right: 55px;
-            .right-icon{ position: absolute; right: 20px; top: 0; bottom: 0;  margin: auto; height: 16px;
+            .right-icon{ position: absolute; right: 20px; top: 0; bottom: 0;  margin: auto; height: 24px;
+                @include font-size($font-size-body);
                 @include breakpoint('lg', max) {right: 15px;}
             }
             @include breakpoint('lg', max) {

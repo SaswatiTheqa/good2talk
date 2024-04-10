@@ -41,7 +41,7 @@ $(document).ready(function () {
                   0: { slidesPerView: 1.2, spaceBetween: 20, },
                   440: { slidesPerView: 1.6, spaceBetween: 20, },
                   575: { slidesPerView: 2.1, spaceBetween: 20, },
-                  767: { slidesPerView: 2.8, spaceBetween: 30, },
+                  767: { slidesPerView: 2.3, spaceBetween: 30, },
                   1024: { slidesPerView: 3.2, spaceBetween: 30, },
                   1366: { slidesPerView: 3.02, spaceBetween: 30, },
               }
@@ -55,32 +55,35 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 300) {
-           $('.on-header').addClass('sticky');
-        } else {
-           $('.on-header').removeClass('sticky');
-        }
-    });
 
-   
-
-    
 
     /* search form */
+    if (window.innerWidth > SmallDesktopDown) {
+     $(".search-site , .cross-btn").on("click", function (e) {
+        e.preventDefault();
+        $(".header-search-holder").animate({ width: "toggle" }, 700);
+      });
+    }
+    if (window.innerWidth < SmallDesktopDown) {
+      $(".search-site").on("click", function (e) {
+        e.preventDefault();
+        $('.header-search-holder').slideDown(200);
+      });
+      $(".cross-btn").on("click", function (e) {
+        e.preventDefault();
+        $('.header-search-holder').slideUp(200);
+      });
+    }
 
-    $(".search-site").click(function () {
-        $('.header-search-holder').addClass('d-block');
-        // $(".header-search-holder").animate({
-        //     width: "toggle"
-        //   }, 800);
-    });
+    
+      $(".tool-menu.navbar-toggler").on("click", function () {
+          $(this).toggleClass('open')
+          $(".tool-menu.navbar-toggler .text").text($(".tool-menu.navbar-toggler .text").text() == 'Menu' ? 'Close' : 'Menu');
+      });
 
-    $(".cross-btn").click(function () {
-        $('.header-search-holder').removeClass('d-block');
-    });
- 
 
+
+      
     //   provinceGo
     const provinceGo = () => {
         const selectVal = document.getElementById('provinceSelect').value;
@@ -90,15 +93,64 @@ $(document).ready(function () {
     };
     document.querySelector('#provinceGo').addEventListener('click', provinceGo);
 
-    // const searchForm = (e) => {
-    //     e.preventdefault()
-    // };
-    // document.querySelector('#searchForm').addEventListener('click', searchForm);
+
+    
+    
+
 
 });
 
 
 
+var headerFixed = false;
+var header = document.querySelector(".main-header.province");
+var scrollPosition = 0;
+var SmallDesktopDown = 1200;
+var SmallDesktopUp = 1199.98;
 
+scrollPosition = window.pageYOffset;
+window.addEventListener("scroll", function () {
+  if (header != null) {
+    if (
+      this.window.pageYOffset > header.clientHeight &&
+      headerFixed == false &&
+      scrollPosition > this.window.pageYOffset &&
+      window.innerWidth > SmallDesktopUp
+    ) {
+      setStickyHeader();
+    } else if (
+      scrollPosition < this.window.pageYOffset &&
+      headerFixed == true &&
+      window.innerWidth > SmallDesktopUp ||
+      this.window.pageYOffset < header.clientHeight &&
+      headerFixed == true &&
+      window.innerWidth > SmallDesktopUp
+    ) {
+      resetSticyHeader();
+    }
+  }
+  /*if(window.innerWidth > 767.98){
+    stickyOnThis(scrollPosition);
+  }*/
+  scrollPosition = this.window.pageYOffset;
+});
+function setStickyHeader() {
+  if (header != null) {
+    document.body.style.paddingTop = header.clientHeight + "px";
+    document
+      .querySelector(":root")
+      .style.setProperty("--header-height", header.clientHeight + "px");
+    header.classList.add("sticky");
+    this.setTimeout(function () {
+      header.classList.add("show");
+    }, 50);
+    headerFixed = true;
+  }
+}
 
-
+function resetSticyHeader() {
+  document.body.style.paddingTop = null;
+  header.classList.remove("sticky");
+  header.classList.remove("show");
+  headerFixed = false;
+}

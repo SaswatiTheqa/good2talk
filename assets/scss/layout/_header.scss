@@ -39,23 +39,48 @@
         }
     }
     .main-menu .search-site{display: none; }
+
+
     &.sticky{position: fixed;  background: #fffdf8; box-shadow: 0 3px 6px rgba(0,0,0,0.16); padding-top: 10px; top: 0px;
         padding-bottom: 10px; z-index: 999;
         .logo a img{ width: 63px; }
         .quick-links{ display: none !important;  }
         .main-menu .search-site{display: block ; }
+        .header-search-holder{ width: 80%; top:2px;
+            input{ background-color: #fffdf8;}
+        }
     }
     
 
 }
-.header-search-holder{ position: absolute; right: 0; width: 100vw; display: none;  @include transition-prefixes(0.3s);
-    @include breakpoint('xl', min) { width: 85%;}
-    input{ border: 0; border-bottom: 1px solid #000;  border-radius: 0; color: #000; background: #e9f7f6; @include font-size($font-size-body); 
+.header-search-holder{ position: absolute; right: 0; left: auto;  display: none; width: 77%; top:0;
+    .form-wrapper{  position: relative;}
+    input{ border: 0; border-bottom: 1px solid $black_color;  border-radius: 0; color: $black_color; background-color: $primaryHover_color; @include font-size($font-size-body); 
        padding: 5px 20px 5px 40px;
-       &:focus{background: #e9f7f6; box-shadow: none; border-bottom-color: #000;  }
+       &:focus{background-color: $primaryHover_color; box-shadow: none; border-bottom-color: $black_color;  }
     }
-    .search-btn , .cross-btn{ border: none; position: absolute;  bottom: 2px; background: transparent;}
+    .search-btn , .cross-btn{ border: none; position: absolute;  background: transparent; width: 30px;
+        height: 30px; bottom: 0; top:0; margin: auto;}
     .cross-btn { right: 0;}
     .search-btn { left: 0; }
+    @include breakpoint('xl', max) {  top:63px; margin-left: calc(-50vw + 50%);
+        background-color: #fffdf8; width: 100vw; padding: 10px 20px 15px; left: 0; box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        input{background-color: #fffdf8; height: 60px;}
+    }
+}
 
+.on-header{
+    .scrolling-section{ 
+        @include breakpoint('xl', min) { display: none};
+        .quick-links{ text-align: right; margin-bottom: 60px;
+            .site-language{
+            text-align: right;
+            margin-bottom: 30px;
+
+           }
+        }
+       .navbar-nav {align-items: flex-end;
+        
+       }
+    }
 }
